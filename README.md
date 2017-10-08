@@ -21,8 +21,8 @@ gradleやmavenを利用するサンプルをdockerで利用する場合は
 * [practice5](practice5/README.md) リフレクションを利用したサンプルを利用して、モジュールのexport, openについて探ってみよう
 * [practice6](practice6/README.md) モジュールのリフレクションを利用して実行時にexportを追加して本来動かないコードを動かしてみよう
 * [practice7](practice7/README.md) Callbackを使うような、3パッケージの構成を書いてみよう
-* [practice7](practice7) gradleを使ってjava9をビルドしてみようと思ったら普通にビルドできた
-* [practice7](practice8) mavenを使ってjava9をビルドしてみようと思ったら普通にビルドできた
+* [practice8](practice8) gradleを使ってjava9をビルドしてみようと思ったら普通にビルドできた
+* [practice9](practice9) mavenを使ってjava9をビルドしてみようと思ったら普通にビルドできた
 
 ## おまけ
 
