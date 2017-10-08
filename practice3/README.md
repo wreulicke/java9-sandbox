@@ -1,6 +1,7 @@
 # モジュールのパッケージ
 
-今回のファイルパス構成は最終的に以下のような構成になります
+今回のファイルパス構成は最終的に以下のような構成になります。
+省略しているところが存在します。
 
 ```
 .
@@ -28,7 +29,7 @@
 
 ## コンパイルとパッケージ
 
-Anotherモジュールをコンパイルしてパッケージします。
+anotherモジュールをコンパイルしてパッケージします。
 
 ```
 javac -d mod/com.github.wreulicke.another $(find src/com.github.wreulicke.another/ -name *.java)

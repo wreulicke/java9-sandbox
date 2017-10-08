@@ -2,7 +2,7 @@
 
 ## コンパイル
 
-Anotherモジュールをコンパイルします。
+anotherモジュールをコンパイルします。
 
 ```
 javac -d mod/com.github.wreulicke.another $(find src/com.github.wreulicke.another/ -name *.java)
