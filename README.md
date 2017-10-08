@@ -23,6 +23,7 @@ gradleやmavenを利用するサンプルをdockerで利用する場合は
 * [practice7](practice7/README.md) Callbackを使うような、3パッケージの構成を書いてみよう
 * [practice8](practice8) gradleを使ってjava9をビルドしてみようと思ったら普通にビルドできた
 * [practice9](practice9) mavenを使ってjava9をビルドしてみようと思ったら普通にビルドできた
+* [practice10](practice10) lombokを使ったモジュールをビルドしてみよう
 
 ## おまけ
 
