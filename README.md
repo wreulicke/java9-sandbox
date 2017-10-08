@@ -8,7 +8,7 @@ gradleのwrapperのダウンロードではSSL関係のエラーが発生しま�
 https://github.com/docker-library/openjdk/issues/145
 
 gradleやmavenを利用するサンプルをdockerで利用する場合は
-~/.gradleや~/.m2をボリュームマウントして利用すると良いでしょう。
+`~/.gradle`や`~/.m2`をボリュームマウントして利用すると良いでしょう。
 
 ソースの説明は現状あまりありません。追加するつもりはあります。
 
