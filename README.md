@@ -26,4 +26,4 @@ gradleやmavenを利用するサンプルをdockerで利用する場合は
 
 ## おまけ
 
-もう少し複雑なサンプルは[この辺のリポジトリ](https://github.com/torstenwerner/java-9-no-jar-hell)を見ると良いでしょう。
+もう少し複雑なサンプルは[この辺のリポジトリ](https://github.com/accso/java9-jigsaw-examples/)を見ると良いでしょう。
