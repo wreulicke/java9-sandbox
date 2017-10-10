@@ -2,6 +2,7 @@
 *.jar
 !practice10/lib/lombok*.jar
 
+!**/gradle-wrapper.jar
 */.gradle/
 */build/
 */target/
