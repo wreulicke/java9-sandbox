@@ -5,14 +5,7 @@
  * In a single project build this file can be empty or even removed.
  *
  * Detailed information about configuring a multi-project build in Gradle can be found
- * in the user guide at https://docs.gradle.org/4.0.2/userguide/multi_project_builds.html
+ * in the user guide at https://docs.gradle.org/4.2.1/userguide/multi_project_builds.html
  */
-
-/*
-// To declare projects as part of a multi-project build use the 'include' method
-include 'shared'
-include 'api'
-include 'services:webservice'
-*/
 
 rootProject.name = 'practice8'
