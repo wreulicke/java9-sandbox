@@ -9,62 +9,60 @@
 // Apply the java plugin to add support for Java
 buildscript {
   repositories {
-    mavenCentral()
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
+    jcenter()
   }
   dependencies {
     classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE"
   }
 }
 
-apply plugin: 'java'
+apply plugin: 'java-library'
 apply plugin: "org.springframework.boot"
+
+configurations {
+    custom {
+        it.extendsFrom implementation
+    }
+}
+
+bootRepackage {
+    customConfiguration = 'custom'
+}
 
 sourceCompatibility = '9' // -source
 targetCompatibility = '9' // -target
 
 ext.moduleName = 'com.github.wreulicke'
 
-// In this section you declare where to find the dependencies of your project
 repositories {
-    // Use 'jcenter' for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
 
 compileJava {
-    // inputs.property("moduleName", moduleName)
+    inputs.property("moduleName", moduleName)
     doFirst {
-        // options.compilerArgs = [
-        //     '--module-path', classpath.asPath,
-        // ]
-        options.forkOptions.jvmArgs = ['--module-path', classpath.asPath]
-        options.fork = true
-        options.forkOptions.executable = 'javac'
+        options.compilerArgs = [
+            '--module-path', classpath.asPath,
+        ]
         classpath = files()
     }
 }
 
 compileTestJava {
-    // inputs.property("moduleName", moduleName)
+    inputs.property("moduleName", moduleName)
     doFirst {
-        // options.compilerArgs = [
-        //     '--module-path', classpath.asPath,
-        //     '--add-modules', 'junit',
-        //     '--add-reads', "$moduleName=junit",
-        //     '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
-        // ]
-        options.forkOptions.jvmArgs = ['--module-path', classpath.asPath]
-        options.fork = true
-        options.forkOptions.executable = 'javac'
+        options.compilerArgs = [
+            '--module-path', classpath.asPath,
+            '--add-modules', 'junit',
+            '--add-reads', "$moduleName=junit",
+            '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
+        ]
         classpath = files()
     }
 }
 
 test {
-    // inputs.property("moduleName", moduleName)
+    inputs.property("moduleName", moduleName)
     doFirst {
         jvmArgs = [
             '--module-path', classpath.asPath,
@@ -77,7 +75,7 @@ test {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:1.5.7.RELEASE'
-    testCompile 'junit:junit:4.12'
+    api 'org.springframework.boot:spring-boot-starter-web:1.5.7.RELEASE'
+    testImplementation 'junit:junit:4.12'
 }
 
